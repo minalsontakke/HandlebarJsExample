@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Render template</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+        <!--<link type="text/css" rel="stylesheet" href="public/css/reset.css" />-->
+        <link type="text/css" rel="stylesheet" href="public/css/stylesheet.css" />
+    </head>
+
+    <body>
+        <!-- Insertion point for handlebars template -->
+        <section id="main"></section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="js/lib/handlebars-v3.0.0.js"></script>
+
+        <!-- Simple handlebars template for a blog post, inside {{variable}} are variables we can afect with JS objects-->
+        <script id="simple-template" type="text/x-handlebars-template">
+            <article class="aboutArticle">
+                <h1>{{heading}}</h1>
+                <p class="para">
+                    {{paragraph}}
+                </p>
+                <p class="quote"><span>
+                    &quot;{{quote}}&quot;</span>
+                </p>
+            </article>
+            <nav>
+                <ul>
+                    {{#each this.colors}}
+                    <li><a href="#" class="changeColor" title="Click to change text color!" onclick="button_clickEvent(this);">{{agree_button}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        </script>
+
+        <script src="js/app/app.js"></script>
+        <script src="js/app/helper.js"></script>
+    </body> 
+</html>
