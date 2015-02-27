@@ -1,7 +1,7 @@
 describe('Handlebars Tests', function() {
  
     var helpers = Handlebars.helpers;
-	describe( 'The "agree_button" markup helper', function()
+	describe( 'The "button" markup helper', function()
     {
         it ( 'should be registered', function()
         {
